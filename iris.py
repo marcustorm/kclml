@@ -23,9 +23,20 @@ pandas.set_option('display.max_columns', 500)
 
 # print(dataset.tail(10))
 
+# statistical description
 # print(dataset.describe())
 
+# print number of items in each class
 # print(dataset.groupby("class").size())
 
-dataset.plot(kind="box", subplots=True, layout=(2, 2), sharex=False, sharey=False)
-plt.show()
+# plot boxplots
+# dataset.plot(kind="box", subplots=True, layout=(2, 2), sharex=False, sharey=False)
+# plt.show()
+
+# plot historgram
+# dataset.hist()
+# plt.show()
+
+# multivariate plot
+# scatter_matrix(dataset)
+# plt.show()
