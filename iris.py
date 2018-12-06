@@ -18,11 +18,11 @@ from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 
 
-url = "http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
+# url = "http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
 names = ["sepal-length", "sepal-width", "petal-length", "petal-width", "class"]
 
 # import the data from the web
-dataset = pandas.read_csv(url, names=names)
+dataset = pandas.read_csv("survey.csv", names=names)
 
 # what are the dimensions of the data?
 # print("Dimensions of data:", dataset.shape)
