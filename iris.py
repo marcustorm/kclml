@@ -86,7 +86,7 @@ for name, model in models:
     cv_results = sklearn.model_selection.cross_val_score(model, X_train, Y_train, cv=kfold, scoring=scoring)
     results.append(cv_results)
     names.append(name)
-    my_flower_prediction.append(model.predict(my_flower))
+    # my_flower_prediction.append(model.predict(my_flower))
     msg = "%s: %f(%f)" % (name, cv_results.mean(), cv_results.std())
     print(msg)
-    print
+    # print(my_flower_prediction)
