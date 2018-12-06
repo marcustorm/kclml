@@ -18,7 +18,7 @@ from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 
 
-# url = "http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
+url = "http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
 names = ["sepal-length", "sepal-width", "petal-length", "petal-width", "class"]
 
 # import the data from the web
@@ -54,8 +54,10 @@ pandas.set_option('display.max_columns', 500)
 # plt.show()
 
 array = dataset.values
-X = array[:, 0:4]
-Y = array[:, 4]
+X = array[:, 0:4]  # Note: X is the raw data in numbers i.e. in this program, it's the lengths of the petals etc.
+Y = array[:, 4]  # Note: Y is the correct class i.e. what type of flower it is
+
+# LOOK UP PYTHON SLICING DOCUMENTATION IF YOU ARE UNSURE OF WHAT THE ABOVE DOES
 
 validation_size = 0.2
 seed = 7
