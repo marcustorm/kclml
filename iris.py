@@ -1,6 +1,8 @@
 # Github link
 # https://github.com/marcustorm/kclml/blob/master/iris.py
 
+# Based off a project by Dr Jason Brownlee
+
 import pandas
 from pandas.plotting import scatter_matrix
 import matplotlib.pyplot as plt
@@ -61,7 +63,6 @@ X_train, X_validation, Y_train, Y_validation = sklearn.model_selection.train_tes
                                                                                         random_state=seed)
 scoring="accuracy"
 
-
 # Check algorithms
 
 models = []
@@ -73,12 +74,19 @@ models.append(("NB", GaussianNB()))
 models.append(("SVM", SVC()))
 
 # evaluate models
+
+my_flower = [4.5, 3.5, 6.1, 2.4]
+
 results = []
 names = []
+my_flower_prediction = []
+
 for name, model in models:
     kfold = sklearn.model_selection.KFold(n_splits=10, random_state=seed)
     cv_results = sklearn.model_selection.cross_val_score(model, X_train, Y_train, cv=kfold, scoring=scoring)
     results.append(cv_results)
     names.append(name)
+    my_flower_prediction.append(model.predict(my_flower))
     msg = "%s: %f(%f)" % (name, cv_results.mean(), cv_results.std())
     print(msg)
+    print

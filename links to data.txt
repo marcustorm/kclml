@@ -1,0 +1,11 @@
+UCI machine learning dataset repository:
+https://archive.ics.uci.edu/ml/datasets.html
+
+Cervical cancer dataset:
+https://archive.ics.uci.edu/ml/datasets/Cervical+cancer+%28Risk+Factors%29
+
+Titanic dataset (intermediate):
+https://www.kaggle.com/c/titanic/data
+
+Recurrent neural network (advanced):
+https://github.com/karpathy/char-rnn
